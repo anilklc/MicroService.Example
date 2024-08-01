@@ -4,12 +4,12 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:48538",
-      "sslPort": 44332
+      "applicationUrl": "http://localhost:64153",
+      "sslPort": 44359
     }
   },
   "profiles": {
-    "AuthService": {
+    "TicketService": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

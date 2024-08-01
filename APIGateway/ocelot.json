@@ -12,7 +12,6 @@
       "UpstreamPathTemplate": "/events/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
-
     {
       "DownstreamPathTemplate": "/api/Tickets/{everything}",
       "DownstreamScheme": "http",
@@ -23,7 +22,11 @@
         }
       ],
       "UpstreamPathTemplate": "/tickets/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "",
+        "AllowedScopes": []
+      }
     },
     {
       "DownstreamPathTemplate": "/api/auth/{everything}",
@@ -36,10 +39,10 @@
       ],
       "UpstreamPathTemplate": "/auth/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+      
     }
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:5000"
-    
   }
 }

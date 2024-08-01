@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Ticket.Business.Abstract;
 using Ticket.Entity.Entities;
@@ -7,6 +8,7 @@ namespace Ticket.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    
     public class TicketsController : ControllerBase
     {
         private readonly ITicketService _ticketService;
@@ -15,6 +17,7 @@ namespace Ticket.API.Controllers
             _ticketService = ticketService;
         }
 
+        [Authorize(AuthenticationSchemes ="Admin")]
         [HttpGet("[action]")] 
         public async Task<IActionResult> GetAllTicket() => Ok(_ticketService.GetAll());
 
