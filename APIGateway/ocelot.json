@@ -17,6 +17,13 @@
         "Period": "1s",
         "PeriodTimespan": 10,
         "Limit": 1
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 30,
+        "Region": "somename"
+      },
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin" 
       }
     },
     {
@@ -40,6 +47,9 @@
         "Period": "1s",
         "PeriodTimespan": 10,
         "Limit": 1
+      },
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
       }
     },
     {

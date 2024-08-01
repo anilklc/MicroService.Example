@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Ocelot.Cache.CacheManager;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.Provider.Consul;
@@ -15,7 +16,9 @@ builder.Services.AddAuthentication()
         options.RequireHttpsMetadata = false;
     });
 
-builder.Services.AddOcelot();
+builder.Services.AddOcelot().AddCacheManager(settings => settings.WithDictionaryHandle());
+
+builder.Host.ConfigureLogging(logging => logging.AddConsole());
 
 var app = builder.Build();
 
