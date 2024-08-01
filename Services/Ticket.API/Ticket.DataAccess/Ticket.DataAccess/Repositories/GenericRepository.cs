@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Ticket.DataAccess.Abstract;
@@ -46,5 +47,8 @@ namespace Ticket.DataAccess.Repositories
             return entityEntry.State == EntityState.Modified;
 
         }
+
+        public IQueryable<T> GetWhere(Expression<Func<T, bool>> method) => Table.Where(method);
+        
     }
 }

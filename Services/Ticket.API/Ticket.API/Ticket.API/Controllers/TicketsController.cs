@@ -33,6 +33,9 @@ namespace Ticket.API.Controllers
 
         [HttpDelete("[action]")]
         public async Task<bool> RemoveEvent(string id) => await _ticketService.RemoveAsync(id);
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetTicketByEventId(string eventId) => Ok(await _ticketService.GetTicketByEventId(eventId));
     }
 }
 
