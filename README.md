@@ -1,53 +1,52 @@
 # MicroService.Example
 
-MicroService.Example, temel mikro servis mimarisi prensiplerini öğrenmek ve uygulamak amacıyla geliştirilmiş bir projedir. Bu proje, API Gateway (Ocelot), JWT kimlik doğrulama, Ocelot caching, load balancing, rate limiting ve temel mikro servis iletişimini içermektedir.
+MicroService.Example is a project developed to learn and apply fundamental microservice architecture principles. This project includes API Gateway (Ocelot), JWT authentication, Ocelot caching, load balancing, rate limiting, and basic microservice communication.
 
-## Özellikler
+## Features
 
-- **API Gateway**: Ocelot kullanılarak mikro hizmetlere yönlendirme ve API Gateway işlevselliği.
-- **Kimlik Doğrulama ve Yetkilendirme**: JWT tabanlı kimlik doğrulama ile güvenli erişim.
-- **Ocelot Caching**: Ocelot tarafından sağlanan önbellekleme ile performans iyileştirmesi.
-- **Load Balancing**: Ocelot'un desteklediği yük dengeleme ile isteklerin birden fazla mikro hizmet arasında dağıtılması.
-- **Rate Limiting**: Ocelot tarafından sağlanan rate limiting ile isteklerin kontrolü ve sınırlanması.
-- **Logging**: Konsol loglama kullanılarak merkezi loglama.
-- **Mikro Servis İletişimi**: Servisler arası iletişim ve veri alışverişi.
+- **API Gateway**: Routing and API Gateway functionality using Ocelot.
+- **Authentication and Authorization**: Secure access with JWT-based authentication.
+- **Ocelot Caching**: Performance improvement with caching provided by Ocelot.
+- **Load Balancing**: Distributing requests among multiple microservices with Ocelot's support.
+- **Rate Limiting**: Controlling and limiting requests with rate limiting provided by Ocelot.
+- **Logging**: Centralized logging using console logging.
+- **Microservice Communication**: Communication and data exchange between services.
 
-## Kullanılan Teknolojiler
+## Technologies Used
 
 - ASP.NET Core
 - Ocelot API Gateway
-- JWT Kimlik Doğrulama
+- JWT Authentication
 - Ocelot Caching
 - Ocelot Load Balancing
 - Ocelot Rate Limiting
-- Konsol Loglama
+- Console Logging
 - .NET Core 8
 
-## Başlarken
+## Getting Started
 
-### Gereksinimler
+### Prerequisites
 
 - .NET 8 SDK
 
-### Kurulum
+### Installation
 
-1. Depoyu klonlayın:
+1. Clone the repository:
     ```sh
     git clone https://github.com/anilklc/MicroService.Example.git
     ```
-2. Proje dizinine gidin:
+2. Navigate to the project directory:
     ```sh
     cd MicroService.Example
     ```
-3. API Gateway ve mikro servislerin yapılandırmalarını `appsettings.json` dosyasında güncelleyin.
-4. Ocelot caching, load balancing ve rate limiting yapılandırmalarını `ocelot.json` dosyasında kontrol edin ve gerekirse değişiklik yapın.
-5. Uygulamayı çalıştırın:
+3. Update the API Gateway and microservices configurations in the `appsettings.json` file.
+4. Check and modify the Ocelot caching, load balancing, and rate limiting configurations in the `ocelot.json` file as needed.
+5. Run the application:
     ```sh
     dotnet run
     ```
 
-
-### Ekran Görüntüleri
+### Screenshots
 
 ![Screenshot 1](Screenshots/1.png)
 ![Screenshot 2](Screenshots/2.png)
@@ -56,6 +55,6 @@ MicroService.Example, temel mikro servis mimarisi prensiplerini öğrenmek ve uy
 ![Screenshot 5](Screenshots/5.png)
 ![Screenshot 6](Screenshots/6.png)
 
-### Lisans
+### License
 
-Bu proje MIT Lisansı altında lisanslanmıştır.
+This project is licensed under the MIT License.
